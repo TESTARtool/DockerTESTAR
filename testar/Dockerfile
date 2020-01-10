@@ -12,7 +12,4 @@ COPY webdriver_docker settings/webdriver_docker
 
 RUN touch settings/webdriver_docker.sse
 
-# CMD ./testar
-CMD sleep infinity
-
-#CMD ./testar ShowVisualSettingsDialogOnStartup=false
+CMD ./testar
