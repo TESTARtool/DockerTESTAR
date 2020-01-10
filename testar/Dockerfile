@@ -8,7 +8,9 @@ RUN wget -q https://testar.org/images/development/testar_master_2.2.3.zip && \
 
 WORKDIR testar/bin/
 
-RUN touch settings/webdriver_generic.sse
+COPY webdriver_docker settings/webdriver_docker
+
+RUN touch settings/webdriver_docker.sse
 
 # CMD ./testar
 CMD sleep infinity
