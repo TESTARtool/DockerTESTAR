@@ -7,7 +7,12 @@ version: "3.7"
 services:
 
   testar:
+    # to run on os x locally with X11: docker run -it --rm -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix  test bash
     build: ./testar
+    environment: 
+      - DISPLAY=host.docker.internal:0
+    volumes: 
+      - /tmp/.X11-unix:/tmp/.X11-unix
   
   orient:
     build: orientdb
