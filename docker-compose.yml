@@ -10,13 +10,11 @@ services:
     build: ./testar
   
   orient:
-    image: orientdb
+    build: orientdb
     expose:
       - 2424
     ports:
       - 2480:2480
-    environment: 
-      - ORIENTDB_ROOT_PASSWORD=root12345
 
   webdriver:
     image: browserless/chrome
