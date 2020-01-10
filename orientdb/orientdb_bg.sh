@@ -7,5 +7,3 @@ set -m
 ./bin/server.sh &
 
 sleep 5 # TODO: replace by wait until command before orientdb has started completely
-
-
