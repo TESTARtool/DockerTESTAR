@@ -20,7 +20,7 @@ spec:
           medium: Memory
       containers:
       - name: selenium-node-chrome-testar
-        image: aslomp/testar:latest
+        image: aslomp/testar
         ports:
           - containerPort: 5555
         volumeMounts:
