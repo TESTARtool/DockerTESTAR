@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: selenium-node-chrome
+  name: selenium-node-chrome-testar
   labels:
-    app: selenium-node-chrome
+    app: selenium-node-chrome-testar
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
-      app: selenium-node-chrome
+      app: selenium-node-chrome-testar
   template:
     metadata:
       labels:
-        app: selenium-node-chrome
+        app: selenium-node-chrome-testar
     spec:
       volumes:
       - name: dshm
         emptyDir:
           medium: Memory
       containers:
-      - name: selenium-node-chrome
-        image: aslomp/docker:latest
+      - name: selenium-node-chrome-testar
+        image: aslomp/testar:latest
         ports:
           - containerPort: 5555
         volumeMounts:
