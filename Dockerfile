@@ -9,7 +9,7 @@ RUN sudo sh -c 'apt-get -y install openjdk-8-jdk'
 RUN sudo sh -c 'unzip testar.zip'
 RUN sudo sh -c 'echo >/etc/java-8-openjdk/accessibility.properties'
 RUN sudo sh -c 'echo > /testar/bin/settings/webdriver_generic.sse'
-RUN sh -c 'echo sudo /testar/bin/testar \& >start1'
+
 RUN sh fixStartup.sh
 
 RUN x11vnc -storepasswd secret /home/seluser/.vnc/passwd
