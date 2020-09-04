@@ -9,8 +9,6 @@ RUN sudo sh -c 'unzip testar.zip'
 RUN sudo sh -c 'echo >/etc/java-8-openjdk/accessibility.properties'
 RUN sudo sh -c 'echo > /testar/bin/settings/webdriver_generic.sse'
 
-RUN ./fixStartup.sh'
-
 RUN x11vnc -storepasswd secret /home/seluser/.vnc/passwd
 EXPOSE 4444 5900
 
