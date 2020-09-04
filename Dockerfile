@@ -12,4 +12,4 @@ RUN sudo sh -c 'echo > /testar/bin/settings/webdriver_generic.sse'
 RUN x11vnc -storepasswd secret /home/seluser/.vnc/passwd
 EXPOSE 4444 5900
 
-CMD sudo -sh -c 'cd /testar/bin; ./testar'
+CMD sudo sh -c 'cd /testar/bin; ./testar'
