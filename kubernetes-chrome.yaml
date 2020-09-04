@@ -31,6 +31,8 @@ spec:
             value: "selenium-hub"
           - name: HUB_PORT
             value: "4444"
+          - name: testurl
+            value: #{TestUrl}#
         resources:
           limits:
             memory: "1000Mi"
